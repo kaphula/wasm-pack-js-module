@@ -10,7 +10,7 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 
 #[wasm_bindgen(raw_module = "./pixi.mjs")]
-// #[wasm_bindgen(raw_module = "pixi.js")]
+// #[wasm_bindgen(raw_module = "pixi.mjs")]
 extern {
     pub type Application;
     pub type IApplicationOptions;

@@ -27,8 +27,7 @@
   },
   "homepage": "https://github.com/rustwasm/create-wasm-app#readme",
   "dependencies": {
-    "wasm-pack-lib": "file:../pkg",
-    "pixi.js": "^6.1.3"
+    "wasm-pack-lib": "file:../pkg"
   },
   "devDependencies": {
     "hello-wasm-pack": "^0.1.0",
