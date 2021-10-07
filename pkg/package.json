@@ -1,0 +1,16 @@
+{
+  "name": "wasm-pack-lib",
+  "collaborators": [
+    "kaphula <vaaka@protonmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "wasm_pack_lib_bg.wasm",
+    "wasm_pack_lib.js",
+    "wasm_pack_lib_bg.js",
+    "wasm_pack_lib.d.ts"
+  ],
+  "module": "wasm_pack_lib.js",
+  "types": "wasm_pack_lib.d.ts",
+  "sideEffects": false
+}
