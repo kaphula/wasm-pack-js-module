@@ -12,6 +12,11 @@ default = ["console_error_panic_hook"]
 
 [dependencies]
 wasm-bindgen = "0.2.63"
+js-sys = "0.3.55"
+# web-sys = "0.3.55"
+
+
+
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
 # logging them with `console.error`. This is great for development, but requires
@@ -29,6 +34,25 @@ wee_alloc = { version = "0.4.5", optional = true }
 [dev-dependencies]
 wasm-bindgen-test = "0.3.13"
 
+# Grants access to all web APIs and DOM manipulation structures.
+# Features used in the project must be enabled explicitly, see the feature list:
+# https://github.com/rustwasm/wasm-bindgen/blob/master/crates/web-sys/Cargo.toml#L32
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+    'Document',
+    'Element',
+    'HtmlElement',
+    'HtmlCanvasElement',
+    'Node',
+    'Window',
+    'WebGlBuffer',
+    'WebGlVertexArrayObject',
+    'WebGl2RenderingContext',
+    'WebGlProgram',
+    'WebGlShader',
+]
+
 [profile.release]
 # Tell `rustc` to optimize for small code size.
-opt-level = "s"
+# opt-level = "s"

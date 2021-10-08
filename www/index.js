@@ -1,7 +1,9 @@
 import * as wasm from "wasm-pack-lib"
 
 // initializes pixi instance (see browser console log for pixi message)
-const app = wasm.create_pixi_app()
+// const app = wasm.create_pixi_app()
+
+wasm.start_webgl()
 
 // document.body.appendChild(app.view);
 // app.renderer.backgroundColor = 0x20202e;
@@ -31,4 +33,6 @@ const app = wasm.create_pixi_app()
 //     app.stage.addChild(sprite2);
 // }
 
+
+// "pixi.js": "^6.1.3"
 

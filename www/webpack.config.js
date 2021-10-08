@@ -1,4 +1,5 @@
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -9,6 +10,17 @@ module.exports = {
   },
   mode: "development",
   plugins: [
-    new CopyWebpackPlugin(['index.html'])
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    }),
+    new CopyWebpackPlugin(['index.html']),
+    new webpack.ProvidePlugin({
+      TextDecoder: ['text-encoding', 'TextDecoder'],
+      TextEncoder: ['text-encoding', 'TextEncoder']
+    })
   ],
+  mode: 'development',
+  experiments: {
+    asyncWebAssembly: true
+  }
 };

@@ -7,3 +7,8 @@
 
 You should now be able to open browser to `localhost:8080` and see pixi.js get initialized properly through
 WebAssembly/Rust in the console. The Javascript executed in the browser window is in the file: `www/index.js`.
+
+
+## Creating bindings from JS to Rust
+
+https://rustwasm.github.io/wasm-bindgen/contributing/design/importing-js-struct.html
