@@ -5,6 +5,14 @@ import * as wasm from "wasm-pack-lib"
 
 wasm.start_webgl()
 
+
+
+//  "webpack": "^4.29.3",
+// "webpack-cli": "^3.1.0",
+// "webpack-dev-server": "^3.1.5",
+// "copy-webpack-plugin": "^5.0.0"
+
+
 // document.body.appendChild(app.view);
 // app.renderer.backgroundColor = 0x20202e;
 // let type = "WebGL";

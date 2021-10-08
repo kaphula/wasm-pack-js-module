@@ -1,5 +1,6 @@
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
 const path = require('path');
 
 module.exports = {
@@ -13,11 +14,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html'
     }),
-    new CopyWebpackPlugin(['index.html']),
-    new webpack.ProvidePlugin({
-      TextDecoder: ['text-encoding', 'TextDecoder'],
-      TextEncoder: ['text-encoding', 'TextEncoder']
-    })
+    // new CopyWebpackPlugin(['index.html']),
+    new CopyPlugin(
+        {
+          patterns: [
+            {from: 'index.html', to: "dest" },
+          ]
+        }
+    ),
+
+    // new webpack.ProvidePlugin({
+    //   TextDecoder: ['text-encoding', 'TextDecoder'],
+    //   TextEncoder: ['text-encoding', 'TextEncoder']
+    // })
   ],
   mode: 'development',
   experiments: {
